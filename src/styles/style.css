@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+    .main-link-active{
+        @apply after:absolute after:w-[calc(100%+32px)] after:h-full after:-left-2 after:-mr-2 after:top-0 after:bg-sec/[0.09] after:-z-10 after:rounded-r-full;
+    }
+}

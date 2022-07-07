@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="../../../dist/styles/style.css">
+</head>
+<body class="h-full text-tx leading-1.6">
+    <header class="flex bg-pm py-0.5 px-2 fixed w-screen z-10 left-0 top-0">
+        <button class="w-[24px] text-w h-[24px] lg:hidden self-center  mr-1">
+            <svg id="toggleSidebarMobileHamburger" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+            <!-- Close Menu -->
+            <svg id="toggleSidebarMobileClose" class="w-6 h-6 hidden" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+        </button>
+        <div class="logo w-[222px] md:w-[268px]">
+            <a href="#" class="logo">
+                <img src="../../images/logo_wh.svg" alt="Recruiiit Logo In White">
+            </a>
+        </div>
+        <div class="flex justify-between grow">
+            <div class="subs self-center relative hidden lg:block ">
+                <button class="bg-w py-0.5 px-1 text-sm rounded-full">
+                    Your Subscription
+                    <i class="fa fa-angle-right ml-0.5"></i>
+                </button>
+            </div>
+            <div class="header-right self-center ml-auto lg:ml-0">
+                <ul class="flex items-center">
+                    <li class="mr-1.25 relative">
+                        <button class="text-w">
+                            <i class="fa fa-plus mr-0.5"></i>
+                            <span class=" hidden sm:inline">Add New</span>
+                        </button>
+                        <ul class="absolute hidden right-0 top-full bg-tx-light w-[186px] rounded-xs overflow-hidden">
+                            <li class="px-1 py-0.5 text-xs text-w leading-1.4 border-b border-solid border-g-md/[0.2]">
+                               <h6 class="uppercase text-sm font-medium">New</h6> 
+                            </li>
+                            <li class="px-1 py-0.5 border-b border-solid border-g-md/[0.2]">
+                                <a href="#" class="text-w/[0.8] hover:text-w">
+                                    <i class="fa fa-briefcase mr-1"></i> Job Opening
+                                </a>
+                            </li>
+                            <li class="px-1 py-0.5 border-b border-solid border-g-md/[0.2]">
+                                <a href="#" class="text-w/[0.8] hover:text-w">
+                                    <i class="fa fa-id-card mr-1"></i> Candidate
+                                </a>
+                            </li>
+                            <li class="px-1 py-0.5 border-b border-solid border-g-md/[0.2]">
+                                <a href="#" class="text-w/[0.8] hover:text-w">
+                                    <i class="fa fa-network-wired mr-1"></i> Talent Pool
+                                </a>
+                            </li>
+                            <li class="px-1 py-0.5">
+                                <a href="#" class="text-w/[0.8] hover:text-w">
+                                    <i class="fa fa-users mr-1"></i> Team Member
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="relative">
+                        <figure class="w-[36px] h-[36px] rounded-full overflow-hidden">
+                            <img src="../../images/profile-avatar.png" alt="Profile Avatar">
+                        </figure>
+                        <ul class="absolute hidden right-0 top-full bg-tx-light w-[186px] rounded-xs overflow-hidden">
+                            <li class="px-1 py-0.5 text-xs text-w leading-1.4 border-b border-solid border-g-md/[0.2]">
+                                <span class="block">Adriana Lopez</span>
+                                <span class="block text-g-edk">Administrator</span>
+                                <span class="mt-0.5 block">for Be Rojgaar</span>
+                            </li>
+                            <li class="px-1 py-0.5 border-b border-solid border-g-md/[0.2]">
+                                <a href="#" class="text-w/[0.8] hover:text-w">
+                                    <i class="fa fa-user mr-1"></i> Profile Settings
+                                </a>
+                            </li>
+                            <li class="px-1 py-0.5 bg-tx-dark">
+                                <a href="#" class="text-w/[0.8] hover:text-w">
+                                    <i class="fa fa-power-off mr-1"></i> Log Out
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <section class="h-full pt-[60px] lg:pl-[268px]">
+        <aside class="w-[268px] bg-g-lt p-2 pt-[92px] top-0 flex flex-col h-screen fixed -left-full lg:left-0 ">
+            <nav class="main-nav">
+                <ul class="leading-[290%]">
+                    <li>
+                        <a href="index.html" class="text-tx-light hover:text-tx-dark block">
+                            <i class="fa fa-tachometer-alt mr-1"></i> Dashboard
+                        </a>
+                    </li>
+                    <li class="relative main-link-active">
+                        <a href="joblist.html" class="text-tx-light hover:text-tx-dark block">
+                            <i class="fa fa-briefcase mr-1"></i> Job Openings
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-tx-light hover:text-tx-dark block">
+                            <i class="fa fa-id-card mr-1"></i> Candidates
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-tx-light hover:text-tx-dark block">
+                            <i class="fa fa-user-friends mr-1"></i> Interviews
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-tx-light hover:text-tx-dark block">
+                            <i class="fa fa-network-wired mr-1"></i> Talent Pool
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-tx-light hover:text-tx-dark block">
+                            <i class="fa fa-chart-line mr-1"></i> Reports
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <nav class="sec-nav mt-auto">
+                <ul class="leading-[290%]">
+                    <li>
+                        <a href="employerbranding.html" class="text-tx-light hover:text-tx-dark block">
+                            <i class="fa fa-crown mr-1"></i> Employer Branding
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-tx-light hover:text-tx-dark block">
+                            <i class="fa fa-cog mr-1"></i> Settings
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="p-2">
+            <div class="border-b border-solid border-g-md px-2 -mx-2 mb-2">
+                <ul class="flex gap-2">
+                    <li>
+                        <a href="#" class="py-0.75 block border-b-4 border-solid border-pm font-medium text-tx-light hover:text-tx">Active Jobs</a>
+                    </li>
+                    <li>
+                        <a href="#" class="py-0.75 block text-tx-light hover:text-tx">Archived</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-content">
+                <div class="flex justify-between flex-col sm:flex-row">
+                    <div class="tabs-inner mb-1 sm:mb-0">
+                        <ul class="flex border border-solid border-g-md rounded-xs">
+                            <li class="w-1/2 sm:w-auto px-0.5 border-r border-solid border-g-md">
+                                <a href="#" class="text-sm block leading-1.5 px-0.5 py-0.25 font-medium border-b-2 border-solid border-sec">My Jobs</a>
+                            </li>
+                            <li class="w-1/2 sm:w-auto px-0.5">
+                                <a href="#" class="text-sm block leading-1.5 px-0.5 py-0.25 text-tx-light hover:text-tx">All Jobs</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-col gap-1 sm:flex-row">
+                        <input type="text" placeholder="Search Job Openings..." class="px-0.5 py-0.25 border border-solid border-g-md rounded-xxs text-sm w-full sm:w-[210px]">
+                        <a href="jobdetails.html" class="rounded-xxs px-0.5 py-0.25 bg-pm text-w hover:bg-pm-d2 text-center">Add New Job</a>
+                    </div>
+                </div>
+                <div class="tab-content-inner mt-1.25">
+                    <div class="border border-sold border-g-md bg-g-lt p-1.25 rounded-xs mb-1">
+                        <header class="flex gap-1 justify-between pb-1 border-b border-solid border-g-md">
+                            <div class="self-center">
+                                <h2 class="text-h mb-0.75 text-1.25base leading-1.3 font-bold"><a href="#">Sr. React JS Developer</a></h2>
+                                <div class="flex flex-col sm:flex-row gap-0.5 sm:gap-1">
+                                    <div class="text-tx-light text-sm">
+                                        <i class="fa fa-suitcase mr-0.5"></i>
+                                        Software
+                                    </div>
+                                    <div class="text-tx-light text-sm">
+                                        <i class="fa fa-map-marker-alt mr-0.5"></i>
+                                        Imadole, Lalitpur
+                                    </div>
+                                    <div class="text-tx-light text-sm">
+                                        <i class="fa fa-clock mr-0.5"></i>
+                                        1 month ago
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="self-center flex relative">
+                                <a href="#" class="hidden md:block mr-0.5 px-0.5 py-0.25 bg-w border border-solid border-g-md rounded-xxs text-xs text-tx-light hover:text-tx hover:bg-g-lt">Edit Details</a>
+                                <a href="#" class="px-0.5 py-0.25 bg-w border border-solid border-g-md rounded-xxs text-xs text-tx-light hover:text-tx hover:bg-g-lt">
+                                    <i class="fa fa-ellipsis-v"></i>
+                                </a>
+                                <ul class="hidden absolute right-0 top-full text-sm bg-tx-light w-[136px] rounded-xs overflow-hidden z-10">
+                                    <li class="md:hidden px-1 py-0.5 border-b border-solid border-g-md/[0.2]">
+                                        <a href="#" class="text-w/[0.8] hover:text-w">
+                                            Edit Details
+                                        </a>
+                                    </li>
+                                    <li class="px-1 py-0.5 border-b border-solid border-g-md/[0.2]">
+                                        <a href="#" class="text-w/[0.8] hover:text-w">
+                                            View Job
+                                        </a>
+                                    </li>
+                                    <li class="px-1 py-0.5 border-b border-solid border-g-md/[0.2]">
+                                        <a href="#" class="text-w/[0.8] hover:text-w">
+                                            View Pipeline
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </header>
+                        <footer class="pt-0.5 flex flex-col sm:flex-row gap-0.5 justify-between">
+                            <div class="flex gap-1 text-sm text-tx-light">
+                                <span>1 Qualified Candidate</span>
+                                <span>0 Disqualified</span>
+                            </div>
+                            <div class="relative text-sm text-tx-light">
+                                <span class="cursor-pointer">
+                                    <span class="w-0.5 h-0.5 rounded-full bg-s inline-block mr-0.5"></span>
+                                    Published 
+                                </span>
+                                <ul class="hidden absolute right-0 top-full bg-tx-light w-[136px] rounded-xs overflow-hidden text-sm">
+                                    <li class="px-1 py-0.5 text-xs text-w leading-1.4 border-b border-solid border-g-md/[0.2]">
+                                       <h6 class="uppercase text-sm font-medium">Job Status</h6> 
+                                    </li>
+                                    <li class="px-1 py-0.5 border-b border-solid border-g-md/[0.2]">
+                                        <button class="text-w/[0.8] hover:text-w">
+                                            Publish
+                                        </button>
+                                    </li>
+                                    <li class="px-1 py-0.5 border-b border-solid border-g-md/[0.2]">
+                                        <button class="text-w/[0.8] hover:text-w">
+                                            Internal
+                                        </button>
+                                    </li>
+                                    <li class="px-1 py-0.5 border-b border-solid border-g-md/[0.2]">
+                                        <button class="text-w/[0.8] hover:text-w">
+                                            Close
+                                        </button>
+                                    </li>
+                                    <li class="px-1 py-0.5">
+                                        <button class="text-w/[0.8] hover:text-w">
+                                            Archive
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </footer>   
+                    </div>
+                    <div class="border border-sold border-g-md bg-g-lt p-1.25 rounded-xs mb-1">
+                        <header class="flex gap-1 justify-between pb-1 border-b border-solid border-g-md">
+                            <div class="self-center">
+                                <h2 class="text-h mb-0.75 text-1.25base leading-1.3 font-bold"><a href="#">Sales Administrator</a></h2>
+                                <div class="flex flex-col sm:flex-row gap-0.5 sm:gap-1">
+                                    <div class="text-tx-light text-sm">
+                                        <i class="fa fa-suitcase mr-0.5"></i>
+                                        Software
+                                    </div>
+                                    <div class="text-tx-light text-sm">
+                                        <i class="fa fa-map-marker-alt mr-0.5"></i>
+                                        Imadole, Lalitpur
+                                    </div>
+                                    <div class="text-tx-light text-sm">
+                                        <i class="fa fa-clock mr-0.5"></i>
+                                        1 month ago
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="self-center flex relative">
+                                <a href="#" class="hidden md:block mr-0.5 px-0.5 py-0.25 bg-w border border-solid border-g-md rounded-xxs text-xs text-tx-light hover:text-tx hover:bg-g-lt">Edit Details</a>
+                                <a href="#" class="px-0.5 py-0.25 bg-w border border-solid border-g-md rounded-xxs text-xs text-tx-light hover:text-tx hover:bg-g-lt">
+                                    <i class="fa fa-ellipsis-v"></i>
+                                </a>
+                                <ul class="hidden absolute right-0 top-full text-sm bg-tx-light w-[136px] rounded-xs overflow-hidden z-10">
+                                    <li class="md:hidden px-1 py-0.5 border-b border-solid border-g-md/[0.2]">
+                                        <a href="#" class="text-w/[0.8] hover:text-w">
+                                            Edit Details
+                                        </a>
+                                    </li>
+                                    <li class="px-1 py-0.5 border-b border-solid border-g-md/[0.2]">
+                                        <a href="#" class="text-w/[0.8] hover:text-w">
+                                            View Job
+                                        </a>
+                                    </li>
+                                    <li class="px-1 py-0.5 border-b border-solid border-g-md/[0.2]">
+                                        <a href="#" class="text-w/[0.8] hover:text-w">
+                                            View Pipeline
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </header>
+                        <footer class="pt-0.5 flex flex-col sm:flex-row gap-0.5 justify-between">
+                            <div class="flex gap-1 text-sm text-tx-light">
+                                <span>1 Qualified Candidate</span>
+                                <span>0 Disqualified</span>
+                            </div>
+                            <div class="relative text-sm text-tx-light">
+                                <span class="cursor-pointer">
+                                    <span class="w-0.5 h-0.5 rounded-full bg-s inline-block mr-0.5"></span>
+                                    Published 
+                                </span>
+                                <ul class="hidden absolute right-0 top-full bg-tx-light w-[136px] rounded-xs overflow-hidden text-sm">
+                                    <li class="px-1 py-0.5 text-xs text-w leading-1.4 border-b border-solid border-g-md/[0.2]">
+                                       <h6 class="uppercase text-sm font-medium">Job Status</h6> 
+                                    </li>
+                                    <li class="px-1 py-0.5 border-b border-solid border-g-md/[0.2]">
+                                        <button class="text-w/[0.8] hover:text-w">
+                                            Publish
+                                        </button>
+                                    </li>
+                                    <li class="px-1 py-0.5 border-b border-solid border-g-md/[0.2]">
+                                        <button class="text-w/[0.8] hover:text-w">
+                                            Internal
+                                        </button>
+                                    </li>
+                                    <li class="px-1 py-0.5 border-b border-solid border-g-md/[0.2]">
+                                        <button class="text-w/[0.8] hover:text-w">
+                                            Close
+                                        </button>
+                                    </li>
+                                    <li class="px-1 py-0.5">
+                                        <button class="text-w/[0.8] hover:text-w">
+                                            Archive
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </footer>   
+                    </div>
+                    <div class="border border-sold border-g-md bg-g-lt p-1.25 rounded-xs mb-1">
+                        <header class="flex gap-1 justify-between pb-1 border-b border-solid border-g-md">
+                            <div class="self-center">
+                                <h2 class="text-h mb-0.75 text-1.25base leading-1.3 font-bold"><a href="#">Marketing Manager</a></h2>
+                                <div class="flex flex-col sm:flex-row gap-0.5 sm:gap-1">
+                                    <div class="text-tx-light text-sm">
+                                        <i class="fa fa-suitcase mr-0.5"></i>
+                                        Software
+                                    </div>
+                                    <div class="text-tx-light text-sm">
+                                        <i class="fa fa-map-marker-alt mr-0.5"></i>
+                                        Imadole, Lalitpur
+                                    </div>
+                                    <div class="text-tx-light text-sm">
+                                        <i class="fa fa-clock mr-0.5"></i>
+                                        1 month ago
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="self-center flex relative">
+                                <a href="#" class="hidden md:block mr-0.5 px-0.5 py-0.25 bg-w border border-solid border-g-md rounded-xxs text-xs text-tx-light hover:text-tx hover:bg-g-lt">Edit Details</a>
+                                <a href="#" class="px-0.5 py-0.25 bg-w border border-solid border-g-md rounded-xxs text-xs text-tx-light hover:text-tx hover:bg-g-lt">
+                                    <i class="fa fa-ellipsis-v"></i>
+                                </a>
+                                <ul class="hidden absolute right-0 top-full text-sm bg-tx-light w-[136px] rounded-xs overflow-hidden z-10">
+                                    <li class="md:hidden px-1 py-0.5 border-b border-solid border-g-md/[0.2]">
+                                        <a href="#" class="text-w/[0.8] hover:text-w">
+                                            Edit Details
+                                        </a>
+                                    </li>
+                                    <li class="px-1 py-0.5 border-b border-solid border-g-md/[0.2]">
+                                        <a href="#" class="text-w/[0.8] hover:text-w">
+                                            View Job
+                                        </a>
+                                    </li>
+                                    <li class="px-1 py-0.5 border-b border-solid border-g-md/[0.2]">
+                                        <a href="#" class="text-w/[0.8] hover:text-w">
+                                            View Pipeline
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </header>
+                        <footer class="pt-0.5 flex flex-col sm:flex-row gap-0.5 justify-between">
+                            <div class="flex gap-1 text-sm text-tx-light">
+                                <span>1 Qualified Candidate</span>
+                                <span>0 Disqualified</span>
+                            </div>
+                            <div class="relative text-sm text-tx-light">
+                                <span class="cursor-pointer">
+                                    <span class="w-0.5 h-0.5 rounded-full bg-s inline-block mr-0.5"></span>
+                                    Published 
+                                </span>
+                                <ul class="hidden absolute right-0 top-full bg-tx-light w-[136px] rounded-xs overflow-hidden text-sm">
+                                    <li class="px-1 py-0.5 text-xs text-w leading-1.4 border-b border-solid border-g-md/[0.2]">
+                                       <h6 class="uppercase text-sm font-medium">Job Status</h6> 
+                                    </li>
+                                    <li class="px-1 py-0.5 border-b border-solid border-g-md/[0.2]">
+                                        <button class="text-w/[0.8] hover:text-w">
+                                            Publish
+                                        </button>
+                                    </li>
+                                    <li class="px-1 py-0.5 border-b border-solid border-g-md/[0.2]">
+                                        <button class="text-w/[0.8] hover:text-w">
+                                            Internal
+                                        </button>
+                                    </li>
+                                    <li class="px-1 py-0.5 border-b border-solid border-g-md/[0.2]">
+                                        <button class="text-w/[0.8] hover:text-w">
+                                            Close
+                                        </button>
+                                    </li>
+                                    <li class="px-1 py-0.5">
+                                        <button class="text-w/[0.8] hover:text-w">
+                                            Archive
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </footer>   
+                    </div>
+                </div>
+            </div>
+        </main>
+    </section>
+</body>
+</html>

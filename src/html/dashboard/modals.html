@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="../../../dist/styles/style.css">
+</head>
+<body class="h-full text-tx leading-1.6">
+    <!-- overlay -->
+    <div class="overlay fixed top-0 left-0 w-screen h-screen bg-h-dark/[0.45] -z-10"></div>
+
+    <!-- Modal -->
+    <!-- Widgets -->
+    <div class="hidden modal p-2 rounded bg-w mx-1 md:w-[586px] md:mx-auto mt-2">
+        <header class="pb-0.75 border-b border-solid border-g-md flex justify-between">
+            <h5 class="text-1.125base text-h font-bold leading-1.3">Add Widget</h5>
+            <button>
+                <i class="fa fa-times text-g-edk"></i>
+            </button>
+        </header>
+        <main class="py-1">
+            <div class="flex gap-1 mb-1">
+                <label for="widget-video">
+                    <input id="widget-video" type="radio" name="widget-type" value="video" class="peer hidden" checked>
+                    <span class="cursor-pointer block px-0.75 py-0.5 leading-1.5 border border-solid border-g-md rounded-xs peer-checked:border-sec peer-checked:bg-sec peer-checked:text-w hover:bg-g-lt">
+                        <i class="fa fa-video mr-0.5"></i>
+                        Video
+                    </span>
+                </label>
+                <label for="widget-imgtxt">
+                    <input id="widget-imgtxt" type="radio" name="widget-type" value="video" class="peer hidden">
+                    <span class="cursor-pointer block px-0.75 py-0.5 leading-1.5 border border-solid border-g-md rounded-xs peer-checked:border-sec peer-checked:bg-sec peer-checked:text-w hover:bg-g-lt">
+                        <i class="fa fa-image mr-0.5"></i>
+                        Image/Text
+                    </span>
+                </label>
+            </div>
+            <div class="mb-1">
+                <label class="mb-0.5 block">Widget Title</label>
+                <input type="text" placeholder="Title..." class="border border-solid border-g-dk w-full px-1 py-0.5 rounded-xs">
+            </div>
+            <div>
+                <label for="uploadVideo" class="px-0.75 py-0.5 text-w rounded-xs inline-block bg-pm hover:bg-pm-d1 cursor-pointer">Upload Video</label>
+                <input id="uploadVideo" type="file" class="hidden">
+            </div>
+        </main>
+        <footer>
+            <button class="bg-pm hover:bg-pm-d1 text-center text-w w-full px-1 py-0.5 rounded-xs">Add Widget</button>
+        </footer>
+    </div>
+
+    <!-- Gallery -->
+    <div class="hidden modal p-2 rounded bg-w mx-1 md:w-[586px] md:mx-auto mt-2">
+        <header class="pb-0.75 border-b border-solid border-g-md flex justify-between">
+            <h5 class="text-1.125base text-h font-bold leading-1.3">Add Gallery</h5>
+            <button>
+                <i class="fa fa-times text-g-edk"></i>
+            </button>
+        </header>
+        <main class="py-1">
+            <div class="mb-1">
+                <label class="mb-0.5 block">Gallery Title</label>
+                <input type="text" placeholder="Title..." class="border border-solid border-g-dk w-full px-1 py-0.5 rounded-xs">
+            </div>
+            <div class="mb-1">
+                <label for="gallery-img" class="cursor-pointer">
+                    <span class="block bg-g-lt p-2 border border-dashed border-g-md text-center">
+                        <i class="fa fa-cloud-upload-alt text-[70px] text-g-dk mb-1.25"></i>
+                        <h6 class="text leading-1.5">Drag and drop or Click to upload images</h6>
+                        <span class="text-xs text-g-edk">Files should be ".jpg", ".png" or ".jpeg"</span>
+                    </span>
+
+                    <input id="gallery-img" type="file" class="hidden" multiple>
+                </label>
+                <ul class="mt-1 flex gap-1">
+                    <li class="relative">
+                        <figure class="overflow-hidden w-[60px] h-[60px] peer">
+                            <img src="../../images/gallery_1.png" alt="Gallery Image">
+                        </figure>
+                        <button class="close w-[15px] h-[15px] rounded-full bg-d text-w text-center leading-[8px] absolute top-[5px] right-[5px] xl:hidden peer-hover:block hover:block">
+                            <i class="fa fa-times text-[10px]"></i>
+                        </button>
+                    </li>
+                    <li class="relative">
+                        <figure class="overflow-hidden w-[60px] h-[60px] peer">
+                            <img src="../../images/gallery_2.png" alt="Gallery Image">
+                        </figure>
+                        <button class="close w-[15px] h-[15px] rounded-full bg-d text-w text-center leading-[8px] absolute top-[5px] right-[5px] xl:hidden peer-hover:block hover:block">
+                            <i class="fa fa-times text-[10px]"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </main>
+        <footer>
+            <button class="bg-pm hover:bg-pm-d1 text-center text-w w-full px-1 py-0.5 rounded-xs">Add Gallery</button>
+        </footer>
+    </div>
+
+    <!-- Benefits -->
+    <div class="modal p-2 rounded bg-w mx-1 md:w-[586px] md:mx-auto mt-2">
+        <header class="pb-0.75 border-b border-solid border-g-md flex justify-between">
+            <h5 class="text-1.125base text-h font-bold leading-1.3">Add Benefits</h5>
+            <button>
+                <i class="fa fa-times text-g-edk"></i>
+            </button>
+        </header>
+        <main class="py-1">
+            <div class="mb-1 relative">
+                <label class="mb-0.5 block">Benefits</label>
+                <input type="text" placeholder="Benefits..." class="border border-solid border-g-dk w-full px-1 py-0.5 rounded-xs">
+                <ul class="hidden suggestions w-full bg-w border border-solid border-g-md rounded-xs overflow-hidden absolute left-0 top-full">
+                    <li class="px-1 py-0.5 hover:bg-sec hover:text-w cursor-pointer border-b border-solid border-g-md">5 days a work week</li>
+                    <li class="px-1 py-0.5 hover:bg-sec hover:text-w cursor-pointer border-b border-solid border-g-md">5 days something</li>
+                    <li class="px-1 py-0.5 hover:bg-sec hover:text-w cursor-pointer border-0">5 days something else</li>
+                </ul>
+            </div>
+            <div class="mb-1">
+                <label class="mb-0.5 block">Benefits Lists</label>
+                <ul class="border border-solid border-g-md rounded-xs bg-g-lt">
+                    <li class="flex justify-between px-1 py-0.5 border-b border-solid border-g-md">
+                        <span>5 days work week</span>
+                        <button class="ml-auto text-g-edk hover:text-tx-light">
+                            <i class="fa fa-times"></i>
+                        </button>
+                    </li>
+                    <li class="flex justify-between px-1 py-0.5 border-0 border-solid border-g-md">
+                        <span>Training Facility</span>
+                        <button class="ml-auto text-g-edk hover:text-tx-light">
+                            <i class="fa fa-times"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </main>
+        <footer>
+            <button class="bg-pm hover:bg-pm-d1 text-center text-w w-full px-1 py-0.5 rounded-xs">Add Benefits</button>
+        </footer>
+    </div>
+</body>
+</html>
