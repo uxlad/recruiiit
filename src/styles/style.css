@@ -3,7 +3,55 @@
 @tailwind utilities;
 
 @layer components{
+    body, html{
+        @apply font-body h-full text-tx leading-1.6;
+    }
+
+    h1, h2, h3, h4, h5, h6{
+        @apply font-heading leading-1.3 text-h font-bold;
+    }
+
     .main-link-active{
         @apply after:absolute after:w-[calc(100%+32px)] after:h-full after:-left-2 after:-mr-2 after:top-0 after:bg-sec/[0.09] after:-z-10 after:rounded-r-full;
+    }
+
+    .btn-xs{
+        @apply px-0.5 py-0.25 rounded-xxs text-sm text-w leading-1.5 text-center;
+    }
+
+    .btn-sm{
+        @apply px-0.5 py-0.25 rounded-xxs text-w leading-1.5 text-center;
+    }
+
+    .btn-md{
+        @apply px-0.75 py-0.5 rounded-xs text-w leading-1.5 text-center;
+    }
+
+    .btn-lg{
+        @apply px-1.25 py-0.75 rounded-xs text-w leading-1.5 text-center;
+    }
+
+    .btn-xl{
+        @apply px-1.25 py-1 rounded-xs text-w leading-1.5 text-center;
+    }
+
+    .input{
+        @apply border border-solid border-g-md rounded-xs text-tx leading-[1.375];
+    }
+
+    .input-sm{
+        @apply input px-0.5 py-0.25 text-sm rounded-xxs;
+    }
+
+    .input-md{
+        @apply input px-0.75 py-0.5;
+    }
+
+    .input-lg{
+        @apply input px-1 py-1;
+    }
+
+    .input-select{
+        @apply py-[9px];
     }
 }

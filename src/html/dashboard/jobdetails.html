@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
     <link rel="stylesheet" href="../../../dist/styles/style.css">
 </head>
-<body class="h-full text-tx leading-1.6">
+<body>
     <header class="flex bg-pm py-0.5 px-2 fixed w-screen z-10 left-0 top-0">
         <button class="w-[24px] text-w h-[24px] lg:hidden self-center  mr-1">
             <svg id="toggleSidebarMobileHamburger" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
@@ -143,7 +143,7 @@
                     <h3 class="text-1.25base leading-1.3 text-h mb-0.75 font-bold">Add a new job opening</h3>
                     <p class="text-tx-light text-sm leading-1.4">To attract the best talents, you will required to have the most attractive job description. Fill out yours below.</p>
                 </div>
-                <button class="px-0.75 py-0.5 rounded-xs bg-pm text-w self-center hover:bg-pm-d2 hidden xl:block">Publish Job</button>
+                <button class="btn-md bg-pm hover:bg-pm-d2 self-center hidden xl:block">Publish Job</button>
             </header>
             <div class="border-b border-solid border-g-md px-2 -mx-2 mb-2">
                 <ul class="flex gap-2">
@@ -156,18 +156,18 @@
                 <form id="">
                     <div class="grid gap-2 grid-cols-3 mb-2">
                         <div class="col-span-3 xl:col-span-1">
-                            <h4 class="text-1.125base text-h mb-0.75 leading-1.3 font-bold">Basic Details</h4>
+                            <h4 class="text-1.125base mb-0.75 heading">Basic Details</h4>
                             <p class="text-tx-light text-sm leading-1.4">Fill out the basic job details to identify and categorize your openings.</p>
                         </div>
                         <div class="col-span-3 xl:col-span-2 grid gap-x-2 gap-y-1 grid-cols-1 sm:grid-cols-2">
                             <div class="form-control">
                                 <label for="" class="mb-0.5 block">Job Title <span class="text-d">*</span></label>
-                                <input type="text" class="border border-solid border-d-dk rounded-xs px-1 py-0.5 w-full" placeholder="Type your job title here...">
+                                <input type="text" class="input-md w-full" placeholder="Type your job title here...">
                                 <span class="text-d text-xs">Your Job Title is missing</span>
                             </div>
                             <div class="form-control">
                                 <label for="" class="mb-0.5 block">Department <span class="text-d">*</span></label>
-                                <select name="" id="" class="border border-solid border-d-dk rounded-xs px-1 py-0.5 w-full">
+                                <select name="" id="" class="input-md input-select w-full">
                                     <option value="">Select</option>
                                     <option value="">IT Department</option>
                                     <option value="">Finance</option>
@@ -177,7 +177,7 @@
                             </div>
                             <div class="form-control">
                                 <label for="" class="mb-0.5 block">Employment Type <span class="text-d">*</span></label>
-                                <select name="" id="" class="border border-solid border-g-md rounded-xs px-1 py-0.5 w-full">
+                                <select name="" id="" class="input-md input-select w-full">
                                     <option value="">Select</option>
                                     <option value="">Full Time</option>
                                     <option value="">Part Time</option>
@@ -186,7 +186,7 @@
                             </div>
                             <div class="form-control">
                                 <label for="" class="mb-0.5 block">Category <span class="text-d">*</span></label>
-                                <select name="" id="" class="border border-solid border-g-md rounded-xs px-1 py-0.5 w-full">
+                                <select name="" id="" class="input-md input-select w-full">
                                     <option value="">Select</option>
                                     <option value="">Human Resource</option>
                                     <option value="">Information Technology</option>
@@ -195,7 +195,7 @@
                             </div>
                             <div class="form-control">
                                 <label for="" class="mb-0.5 block">Required Education <span class="text-d">*</span></label>
-                                <select name="" id="" class="border border-solid border-g-md rounded-xs px-1 py-0.5 w-full">
+                                <select name="" id="" class="input-md input-select w-full">
                                     <option value="">Select</option>
                                     <option value="">Higher Secondary</option>
                                     <option value="">Bachelors</option>
@@ -205,20 +205,20 @@
                             <div class="form-control">
                                 <label for="" class="mb-0.5 block">Salary Range <span class="text-d">*</span></label>
                                 <div class="flex gap-x-2">
-                                    <input type="number" class="border border-solid border-g-md rounded-xs px-1 py-0.5 w-1/2" placeholder="Min">
-                                    <input type="number" class="border border-solid border-g-md rounded-xs px-1 py-0.5 w-1/2" placeholder="Max">
+                                    <input type="number" class="input-md w-1/2" placeholder="Min">
+                                    <input type="number" class="input-md w-1/2" placeholder="Max">
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="grid gap-2 grid-cols-3 mb-2">
                         <div class="col-span-3 xl:col-span-1">
-                            <p class="text-tx-light text-sm leading-1.4">Fill out the required experience and position level for this openings.</p>
+                            <p class="text-tx-light text-sm leading-1.4 xl:mt-[35px]">Fill out the required experience and position level for this openings.</p>
                         </div>
                         <div class="col-span-3 xl:col-span-2 grid gap-x-2 gap-y-1 grid-cols-1 sm:grid-cols-2">
                             <div class="form-control">
                                 <label for="" class="mb-0.5 block">Position <span class="text-d">*</span></label>
-                                <select name="" id="" class="border border-solid border-g-md rounded-xs px-1 py-0.5 w-full">
+                                <select name="" id="" class="input-md input-select w-full">
                                     <option value="">Select</option>
                                     <option value="">Intern</option>
                                     <option value="">Fresher</option>
@@ -230,7 +230,7 @@
                             </div>
                             <div class="form-control">
                                 <label for="" class="mb-0.5 block">Required Experience <span class="text-d">*</span></label>
-                                <select name="" id="" class="border border-solid border-g-md rounded-xs px-1 py-0.5 w-full">
+                                <select name="" id="" class="input-md input-select w-full">
                                     <option value="">Select</option>
                                     <option value="">No Experience</option>
                                     <option value="">0-1 year</option>
@@ -244,13 +244,13 @@
                     </div>
                     <div class="grid gap-2 grid-cols-3 mb-2">
                         <div class="col-span-3 xl:col-span-1">
-                            <h4 class="text-1.125base text-h mb-0.75 leading-1.3 font-bold">Hiring Team</h4>
+                            <h4 class="text-1.125base mb-0.75 heading">Hiring Team</h4>
                             <p class="text-tx-light text-sm leading-1.4">Add team members to work collaboratively to streamline the recruitment process.</p>
                         </div>
                         <div class="col-span-3 xl:col-span-2 grid gap-x-2 gap-y-1 grid-cols-1 sm:grid-cols-2">
                             <div class="form-control">
                                 <label for="" class="mb-0.5 block">Recruiter <span class="text-d">*</span></label>
-                                <select name="" id="" class="border border-solid border-g-md rounded-xs px-1 py-0.5 w-full">
+                                <select name="" id="" class="input-md input-select w-full">
                                     <option value="">Tom Hiddleston</option>
                                     <option value="">Loki</option>
                                     <option value="">Frost Giant</option>
@@ -258,14 +258,14 @@
                             </div>
                             <div class="form-control">
                                 <label for="" class="mb-0.5 block">Hiring Manager</label>
-                                <select name="" id="" class="border border-solid border-g-md rounded-xs px-1 py-0.5 w-full">
+                                <select name="" id="" class="input-md input-select w-full">
                                     <option value="">Odin</option>
                                     <option value="">Borson</option>
                                 </select>
                             </div>
                             <div class="form-control">
                                 <label for="" class="mb-0.5 block">Pipeline <span class="text-d">*</span></label>
-                                <select name="" id="" class="border border-solid border-g-md rounded-xs px-1 py-0.5 w-full">
+                                <select name="" id="" class="input-md input-select w-full">
                                     <option value="">Default</option>
                                     <option value="">No Phone Interview</option>
                                 </select>
@@ -274,7 +274,7 @@
                     </div>
                     <div class="grid gap-2 grid-cols-3 mb-2">
                         <div class="col-span-3 xl:col-span-1">
-                            <h4 class="text-1.125base text-h mb-0.75 leading-1.3 font-bold">Job Location</h4>
+                            <h4 class="heading text-1.125base mb-0.75">Job Location</h4>
                             <p class="text-tx-light text-sm leading-1.4">Enter a location for this opening from the ones added to your profile.</p>
                         </div>
                         <div class="col-span-3 xl:col-span-2 grid gap-x-2 gap-y-1 grid-cols-1 sm:grid-cols-2">
@@ -284,7 +284,7 @@
                                     <a href="#" class="underline hover:no-underline text-sec-l1 hover:text-sec-d1 text-sm float-right">Add New</a>
                                 </label>
                                 
-                                <select name="" id="" class="border border-solid border-g-md rounded-xs px-1 py-0.5 w-full">
+                                <select name="" id="" class="input-md input-select w-full">
                                     <option value="">Kathmandu Office</option>
                                     <option value="">Lalitpur Office</option>
                                 </select>
@@ -301,13 +301,13 @@
                                 <label for="" class="mb-0.5 block">
                                     Job Description <span class="text-d">*</span>
                                 </label>
-                                <textarea name="" class="border border-solid border-g-md rounded-xs px-1 py-0.5 w-full md:w-3/4 h-[240px] resize-none"></textarea>
+                                <textarea name="" class="input-md w-full md:w-3/4 h-[240px] resize-none"></textarea>
                             </div>
                         </div>
                     </div>
                     <div class="grid gap-2 grid-cols-3">
                         <div class="col-start-1 col-span-2 xl:col-start-2">
-                            <button class="px-0.75 py-0.5 rounded-xs bg-pm text-w self-center hover:bg-pm-d2">Publish Job</button>
+                            <button class="btn-md bg-pm hover:bg-pm-d2 self-center">Publish Job</button>
                         </div>
                     </div>
                 </form>

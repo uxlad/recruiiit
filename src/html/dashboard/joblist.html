@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
     <link rel="stylesheet" href="../../../dist/styles/style.css">
 </head>
-<body class="h-full text-tx leading-1.6">
+<body>
     <header class="flex bg-pm py-0.5 px-2 fixed w-screen z-10 left-0 top-0">
         <button class="w-[24px] text-w h-[24px] lg:hidden self-center  mr-1">
             <svg id="toggleSidebarMobileHamburger" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
@@ -138,7 +138,7 @@
             </nav>
         </aside>
         <main class="p-2">
-            <div class="border-b border-solid border-g-md px-2 -mx-2 mb-2">
+            <div class="border-b border-solid border-g-md px-2 -mx-2 mb-2 -mt-2">
                 <ul class="flex gap-2">
                     <li>
                         <a href="#" class="py-0.75 block border-b-4 border-solid border-pm font-medium text-tx-light hover:text-tx">Active Jobs</a>
@@ -153,16 +153,16 @@
                     <div class="tabs-inner mb-1 sm:mb-0">
                         <ul class="flex border border-solid border-g-md rounded-xs">
                             <li class="w-1/2 sm:w-auto px-0.5 border-r border-solid border-g-md">
-                                <a href="#" class="text-sm block leading-1.5 px-0.5 py-0.25 font-medium border-b-2 border-solid border-sec">My Jobs</a>
+                                <a href="#" class="text-sm block leading-1.4 px-0.5 py-0.25 font-medium border-b-2 border-solid border-sec">My Jobs</a>
                             </li>
                             <li class="w-1/2 sm:w-auto px-0.5">
-                                <a href="#" class="text-sm block leading-1.5 px-0.5 py-0.25 text-tx-light hover:text-tx">All Jobs</a>
+                                <a href="#" class="text-sm block leading-1.4 px-0.5 py-0.25 text-tx-light hover:text-tx">All Jobs</a>
                             </li>
                         </ul>
                     </div>
                     <div class="flex flex-col gap-1 sm:flex-row">
-                        <input type="text" placeholder="Search Job Openings..." class="px-0.5 py-0.25 border border-solid border-g-md rounded-xxs text-sm w-full sm:w-[210px]">
-                        <a href="jobdetails.html" class="rounded-xxs px-0.5 py-0.25 bg-pm text-w hover:bg-pm-d2 text-center">Add New Job</a>
+                        <input type="text" placeholder="Search Job Openings..." class="input-sm grow-0 w-full sm:w-[210px]">
+                        <a href="jobdetails.html" class="btn-sm bg-pm hover:bg-pm-d2 grow-0">Add New Job</a>
                     </div>
                 </div>
                 <div class="tab-content-inner mt-1.25">
@@ -186,8 +186,8 @@
                                 </div>
                             </div>
                             <div class="self-center flex relative">
-                                <a href="#" class="hidden md:block mr-0.5 px-0.5 py-0.25 bg-w border border-solid border-g-md rounded-xxs text-xs text-tx-light hover:text-tx hover:bg-g-lt">Edit Details</a>
-                                <a href="#" class="px-0.5 py-0.25 bg-w border border-solid border-g-md rounded-xxs text-xs text-tx-light hover:text-tx hover:bg-g-lt">
+                                <a href="#" class="btn-xs hidden md:block mr-0.5 bg-w border border-solid border-g-md text-tx-light hover:text-tx hover:bg-g-lt">Edit Details</a>
+                                <a href="#" class="btn-xs bg-w border border-solid border-g-md text-tx-light hover:text-tx hover:bg-g-lt">
                                     <i class="fa fa-ellipsis-v"></i>
                                 </a>
                                 <ul class="hidden absolute right-0 top-full text-sm bg-tx-light w-[136px] rounded-xs overflow-hidden z-10">
@@ -267,8 +267,8 @@
                                 </div>
                             </div>
                             <div class="self-center flex relative">
-                                <a href="#" class="hidden md:block mr-0.5 px-0.5 py-0.25 bg-w border border-solid border-g-md rounded-xxs text-xs text-tx-light hover:text-tx hover:bg-g-lt">Edit Details</a>
-                                <a href="#" class="px-0.5 py-0.25 bg-w border border-solid border-g-md rounded-xxs text-xs text-tx-light hover:text-tx hover:bg-g-lt">
+                                <a href="#" class="btn-xs hidden md:block mr-0.5 bg-w border border-solid border-g-md text-tx-light hover:text-tx hover:bg-g-lt">Edit Details</a>
+                                <a href="#" class="btn-xs bg-w text-xs border border-solid border-g-md text-tx-light hover:text-tx hover:bg-g-lt">
                                     <i class="fa fa-ellipsis-v"></i>
                                 </a>
                                 <ul class="hidden absolute right-0 top-full text-sm bg-tx-light w-[136px] rounded-xs overflow-hidden z-10">
@@ -348,8 +348,8 @@
                                 </div>
                             </div>
                             <div class="self-center flex relative">
-                                <a href="#" class="hidden md:block mr-0.5 px-0.5 py-0.25 bg-w border border-solid border-g-md rounded-xxs text-xs text-tx-light hover:text-tx hover:bg-g-lt">Edit Details</a>
-                                <a href="#" class="px-0.5 py-0.25 bg-w border border-solid border-g-md rounded-xxs text-xs text-tx-light hover:text-tx hover:bg-g-lt">
+                                <a href="#" class="btn-xs hidden md:block mr-0.5 bg-w border border-solid border-g-md text-tx-light hover:text-tx hover:bg-g-lt">Edit Details</a>
+                                <a href="#" class="btn-xs bg-w border border-solid border-g-md text-tx-light hover:text-tx hover:bg-g-lt">
                                     <i class="fa fa-ellipsis-v"></i>
                                 </a>
                                 <ul class="hidden absolute right-0 top-full text-sm bg-tx-light w-[136px] rounded-xs overflow-hidden z-10">

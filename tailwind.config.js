@@ -1,6 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 
 module.exports = {
+  corePlugins: {
+    container: false
+  },
   content: ["./src/**/*.{html, js}"],
   theme: {
     colors: {
@@ -51,23 +54,12 @@ module.exports = {
         'dk': '#795D00'
       }
     }, //Declaring default colors
-    container: {
-      center: true,
-      padding: '1rem',
-      screens: {
-        sm: '600px',
-        md: '696px',
-        lg: '952px',
-        xl: '1200px',
-        '2xl': '1496px',
-      }
-    },  //Customizing custom container behavior and style
     fontSize: {
-      'xxs': '0.5rem',
-      'xs': '0.75rem',
-      'sm': '0.875rem',
-      DEFAULT: '1rem',
-      '1.125base': '1.25rem',
+      'xxs': '0.5rem', //8px
+      'xs': '0.75rem', //12px
+      'sm': '0.875rem', //14px
+      DEFAULT: '1rem', //16px
+      '1.125base': '1.125rem', //
       '1.25base': '1.25rem',
       '1.5base': '1.5rem',
       '1.875base': '1.875rem',
@@ -110,7 +102,8 @@ module.exports = {
         '1.35': '1.35',
         '1.4': '1.4',
         '1.5': '1.5',
-        '1': '1'
+        '1': '1',
+        '1.6': '1.6'
       },
       fontFamily: {
         'heading': ['Roboto', 'sans-serif'],
@@ -145,5 +138,30 @@ module.exports = {
       }//Declaring Border Radius
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addComponents }) {
+      addComponents({
+        '.container': {
+          margin: '0 auto',
+          maxWidth: '100%',
+          padding: '1em',
+          '@screen sm': {//640px
+            maxWidth: '600px',
+          },
+          '@screen md': { //768px
+            maxWidth: '700px',
+          },
+          '@screen lg': { //1024px
+            maxWidth: '980px',
+          },
+          '@screen xl': { //1280px
+            maxWidth: '1200px',
+          },
+          '@screen 2xl': { //1536px
+            maxWidth: '1400px',
+          },
+        }
+      })
+    }
+  ],
 }
